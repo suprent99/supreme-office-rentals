@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View office furniture details and choose a flexible rental plan.">
+  <title>Product | Supreme Office Rentals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="product-page">
+  <header class="site-header collection-header">
+    <a class="brand" href="index.html" aria-label="Supreme Office Rentals home"><img class="brand-logo brand-logo-white" src="assets/supreme-office-logo.png" alt="Supreme Office"></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="furnitureMenu">Furniture <span aria-hidden="true"></span></button>
+        <div class="nav-dropdown-menu" id="furnitureMenu">
+          <a href="collection.html?category=chairs">Office chairs</a>
+          <a href="collection.html?category=desks">Office tables / desks</a>
+          <a href="collection.html?category=cabinets">Office cabinets</a>
+          <a href="collection.html?category=workstations">Office workstation seaters</a>
+          <a href="collection.html?category=director-desks">Director desks</a>
+          <a href="collection.html?category=training-tables">Training tables</a>
+        </div>
+      </div>
+      <a href="how-it-works.html">How it works</a><a href="index.html#business">For business</a><a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="header-actions"><a class="button button-accent header-cta" href="index.html#collection">All furniture</a><button class="menu-button" type="button" aria-label="Toggle menu" aria-expanded="false">Menu</button></div>
+  </header>
+
+  <main>
+    <section class="product-detail">
+      <div class="product-detail-media">
+        <a class="product-back" id="categoryBack" href="collection.html?category=chairs">Back to collection</a>
+        <div class="product-main-image"><img id="productImage" src="" alt=""><span class="product-tag" id="productTag" hidden></span></div>
+      </div>
+      <div class="product-detail-copy">
+        <p class="eyebrow" id="productType"></p>
+        <h1 id="productName"></h1>
+        <p class="product-description" id="productDescription"></p>
+        <ul class="product-features" id="productFeatures"></ul>
+
+        <div class="product-option">
+          <div class="option-heading"><strong>Colour</strong><span id="selectedColour"></span></div>
+          <div class="colour-options" id="colourOptions"></div>
+        </div>
+        <div class="product-option" id="sizeOption" hidden>
+          <label for="sizeSelect"><strong>Size</strong></label>
+          <select id="sizeSelect"></select>
+        </div>
+        <div class="product-option">
+          <label for="rentalTerm"><strong>Rental period</strong><span>Choose from 1 month to 2 years</span></label>
+          <select id="rentalTerm"></select>
+        </div>
+
+        <div class="rental-summary">
+          <div><span>Monthly rental</span><strong id="monthlyPrice">RM0</strong></div>
+          <div><span>Rental total</span><strong id="rentalTotal">RM0</strong></div>
+          <small>Delivery, assembly and collection are included within our standard service area.</small>
+        </div>
+        <label class="agreement-check"><input id="agreementCheck" type="checkbox"> <span>I have read and agree to the rental terms below.</span></label>
+        <button class="button button-accent product-enquire" id="enquireButton" type="button" disabled>Request this rental</button>
+      </div>
+    </section>
+
+    <section class="product-lower section">
+      <div class="payment-panel">
+        <p class="eyebrow">Your plan</p><h2>Payment schedule</h2>
+        <p>Payments are due monthly. Your exact start date will be confirmed with delivery.</p>
+        <div class="schedule-summary" id="scheduleSummary"></div>
+        <div class="schedule-table-wrap"><table class="schedule-table"><thead><tr><th>Payment</th><th>Due</th><th>Amount</th></tr></thead><tbody id="scheduleBody"></tbody></table></div>
+      </div>
+      <div class="agreement-panel">
+        <p class="eyebrow">Before you rent</p><h2>Rental agreement</h2>
+        <div class="agreement-list">
+          <details open><summary>Rental period and payment <span>+</span></summary><p>Your selected term begins on the confirmed delivery date. Rental is billed monthly at the displayed rate for the full selected period.</p></details>
+          <details><summary>Delivery and installation <span>+</span></summary><p>Standard delivery, assembly and placement are included within Kuala Lumpur and the Klang Valley. Special access requirements may incur an agreed fee.</p></details>
+          <details><summary>Care, damage and repairs <span>+</span></summary><p>Normal wear is expected. The renter is responsible for avoidable loss or damage beyond normal use. Contact us promptly if a repair is needed.</p></details>
+          <details><summary>Changes, extensions and returns <span>+</span></summary><p>Extensions and product swaps are subject to availability. Early returns may require payment of the remaining committed term. Collection is arranged at the end of the rental.</p></details>
+          <details><summary>Final confirmation <span>+</span></summary><p>This page provides a rental summary. Final availability, delivery timing and the complete rental agreement will be confirmed before your order is accepted.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand brand-light" href="index.html"><img class="brand-logo" src="assets/supreme-office-logo.png" alt="Supreme Office"></a><p>Flexible furniture for better workplaces.</p><div class="footer-links"><a href="index.html#collection">Collection</a><a href="how-it-works.html">How it works</a><a href="index.html#business">Business</a><a href="index.html#faq">FAQ</a></div><small>&copy; 2026 Supreme Office Rentals. Kuala Lumpur, Malaysia.</small></footer>
+  <script src="products.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>
