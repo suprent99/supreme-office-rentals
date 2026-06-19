@@ -4,7 +4,8 @@ const categories = {
   cabinets:{title:"Office cabinets",description:"Smart storage that keeps your workspace organised."},
   workstations:{title:"Office workstation seaters",description:"Flexible workstation layouts designed for growing teams."},
   "director-desks":{title:"Director desks",description:"Executive desks with a confident, professional presence."},
-  "training-tables":{title:"Training tables",description:"Adaptable tables for training rooms, workshops and events."}
+  "training-tables":{title:"Training tables",description:"Adaptable tables for training rooms, workshops and events."},
+  "conference-tables":{title:"Conference tables and desks",description:"Professional meeting tables for boardrooms, discussions and collaborative work."}
 };
 
 const params = new URLSearchParams(window.location.search);
@@ -19,12 +20,13 @@ document.querySelector("#categoryTitle").textContent = categoryInfo.title;
 document.querySelector("#categoryDescription").textContent = categoryInfo.description;
 
 function money(value){return `RM${value.toLocaleString("en-MY")}`;}
+function monthlyPrice(product,term){if(product.rentalRates)return product.rentalRates.find(rate=>term<=rate.max).price;return Math.round(product.price*discounts[term]);}
 function renderCollection(){
   const term = Number(termSelect.value);
   const visible = products.filter(product=>product.category===category);
   grid.innerHTML = visible.map(product=>`<article class="product-card">
     <a class="product-image" href="product.html?id=${product.id}"><img src="${product.image}" alt="${product.name}" loading="lazy">${product.tag?`<span class="product-tag">${product.tag}</span>`:""}</a>
-    <a class="product-info" href="product.html?id=${product.id}"><div><h3>${product.name}</h3><p>${product.type}</p></div><div class="product-price"><strong>${money(Math.round(product.price*discounts[term]))}</strong><span> / mo</span></div></a>
+    <a class="product-info" href="product.html?id=${product.id}"><div><h3>${product.name}</h3><p>${product.type}</p></div><div class="product-price"><strong>${money(monthlyPrice(product,term))}</strong><span> / mo</span></div></a>
   </article>`).join("");
   document.querySelector("#emptyCollection").hidden = visible.length>0;
 }

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260619-23">
 </head>
 <body>
   <header class="site-header">
@@ -17,14 +17,9 @@
     </a>
     <nav class="main-nav" aria-label="Main navigation">
       <div class="nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="furnitureMenu">Furniture <span aria-hidden="true"></span></button>
-        <div class="nav-dropdown-menu" id="furnitureMenu">
-          <a href="collection.html?category=chairs">Office chairs</a>
-          <a href="collection.html?category=desks">Office tables / desks</a>
-          <a href="collection.html?category=cabinets">Office cabinets</a>
-          <a href="collection.html?category=workstations">Office workstation seaters</a>
-          <a href="collection.html?category=director-desks">Director desks</a>
-          <a href="collection.html?category=training-tables">Training tables</a>
+        <a class="nav-dropdown-toggle" href="furniture.html" target="_blank" rel="noopener">Office Furniture For Rent <span aria-hidden="true"></span></a>
+        <div class="nav-dropdown-menu">
+          <a href="collection.html?category=chairs"><img src="assets/vivo-task-chair.png" alt=""><span>Office chairs</span></a><a href="collection.html?category=desks"><img src="assets/useful-work-desk-maple.webp" alt=""><span>Office tables / desks</span></a><a href="collection.html?category=cabinets"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=160&q=75" alt=""><span>Office cabinets</span></a><a href="collection.html?category=workstations"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=160&q=75" alt=""><span>Office workstation seaters</span></a><a href="collection.html?category=director-desks"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=160&q=75" alt=""><span>Director desks</span></a><a href="collection.html?category=training-tables"><img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=160&q=75" alt=""><span>Training tables</span></a><a href="collection.html?category=conference-tables"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=160&q=75" alt=""><span>Conference tables / desks</span></a>
         </div>
       </div>
       <a href="how-it-works.html">How it works</a>
@@ -75,42 +70,71 @@
       <span>Flexible monthly plans</span><i></i><span>Professionally cleaned</span><i></i><span>Free setup & collection</span><i></i><span>Swap anytime</span>
     </section>
 
+    <section class="section rent-comparison" id="why-rent" data-rent-comparison>
+      <div class="rent-comparison-heading">
+        <div><p class="eyebrow">Rent smarter</p><h2>Why rent instead of buy?</h2></div>
+        <p>Build a workplace without tying up unnecessary capital. Renting gives your business room to start, scale and change.</p>
+      </div>
+
+      <div class="comparison-visual" aria-label="Comparison between buying and renting office furniture">
+        <article class="comparison-card buy-card">
+          <span class="comparison-label">Buying furniture</span>
+          <h3>Pay more upfront.<br>Commit for longer.</h3>
+          <div class="cost-meter"><span>Initial commitment</span><strong>High</strong><i style="--meter-width:92%"></i></div>
+          <ul><li>Large upfront payment</li><li>Fixed asset commitment</li><li>Resale or disposal responsibility</li></ul>
+        </article>
+        <div class="comparison-switch" aria-hidden="true"><span>VS</span></div>
+        <article class="comparison-card rent-card">
+          <span class="comparison-label">Renting furniture</span>
+          <h3>Preserve cash.<br>Stay flexible.</h3>
+          <div class="cost-meter"><span>Initial commitment</span><strong>Lower</strong><i style="--meter-width:28%"></i></div>
+          <ul><li>Predictable monthly payments</li><li>Scale furniture with your team</li><li>Collection at the end of the term</li></ul>
+        </article>
+      </div>
+
+      <div class="rent-benefit-flow" aria-label="Benefits of renting office furniture">
+        <article><span>01</span><strong>Protect cash flow</strong><p>Keep more capital available for people, operations and growth.</p></article>
+        <article><span>02</span><strong>Set up faster</strong><p>Furniture is delivered, assembled and placed by our team.</p></article>
+        <article><span>03</span><strong>Adapt as you grow</strong><p>Add, change or reduce furniture when your workspace changes.</p></article>
+        <article><span>04</span><strong>Leave collection to us</strong><p>Avoid storage, resale and disposal work at the end of the rental.</p></article>
+      </div>
+      <div class="rent-comparison-action"><a class="button button-dark" href="furniture.html">Browse rental categories</a></div>
+    </section>
+
     <section class="section collection" id="collection">
       <div class="section-heading split-heading">
-        <div><p class="eyebrow">Curated for real life</p><h2>Find your perfect fit.</h2></div>
-        <p>Pick individual pieces or furnish an entire room. Every item is quality checked before it reaches your space.</p>
+        <div><p class="eyebrow">Browse by category</p><h2>Explore our product categories.</h2></div>
+        <p>Choose a category to explore available products, sizes and flexible rental terms.</p>
       </div>
-      <div class="catalog-toolbar">
-        <label class="category-select">Category
-          <select id="categorySelect">
-            <option value="all">All furniture</option>
-            <option value="chairs">Office chairs</option>
-            <option value="desks">Office tables / desks</option>
-            <option value="cabinets">Office cabinets</option>
-            <option value="workstations">Office workstation seaters</option>
-            <option value="director-desks">Director desks</option>
-            <option value="training-tables">Training tables</option>
-          </select>
-        </label>
-        <label class="term-select">Rental term
-          <select id="termSelect">
-            <option value="1">1 month</option>
-            <option value="3">3 months</option>
-            <option value="6" selected>6 months</option>
-            <option value="12">12 months</option>
-          </select>
-        </label>
-      </div>
-      <div class="product-grid" id="productGrid"></div>
+      <div class="product-grid home-category-grid" id="productGrid"></div>
     </section>
 
     <section class="section steps" id="how-it-works">
-      <div class="section-heading centered"><p class="eyebrow">Simple from start to finish</p><h2>Settle in, in three steps.</h2></div>
-      <div class="step-grid">
+      <div class="section-heading centered"><p class="eyebrow">Simple from start to finish</p><h2>Rent in four clear steps.</h2><p class="journey-intro">Hover or select a step to see what happens and what will be confirmed with you.</p></div>
+      <div class="step-grid" hidden>
         <article><span class="step-number">01</span><div class="step-icon">⌕</div><h3>Choose your pieces</h3><p>Browse our collection and select a rental term that works for you.</p></article>
         <article><span class="step-number">02</span><div class="step-icon">▣</div><h3>We deliver & set up</h3><p>Our team brings everything in and assembles it exactly where you want it.</p></article>
         <article><span class="step-number">03</span><div class="step-icon">↻</div><h3>Keep, swap or return</h3><p>Extend your rental, refresh your look, or let us collect it. No fuss.</p></article>
       </div>
+      <div class="journey-grid" data-journey>
+        <article class="journey-card">
+          <button class="journey-toggle" type="button" aria-expanded="false"><span class="journey-number">01</span><span class="journey-kicker">Explore</span><h3>Choose and configure</h3><p>Select the furniture that suits your workspace.</p><span class="journey-prompt">What happens <i>+</i></span></button>
+          <div class="journey-detail"><div><ul><li>Browse by furniture category</li><li>Choose colour and size where offered</li><li>Select your preferred rental period</li></ul><a href="furniture.html">Browse categories</a></div></div>
+        </article>
+        <article class="journey-card">
+          <button class="journey-toggle" type="button" aria-expanded="false"><span class="journey-number">02</span><span class="journey-kicker">Check</span><h3>Request availability</h3><p>Send your preferred selection for confirmation.</p><span class="journey-prompt">What we check <i>+</i></span></button>
+          <div class="journey-detail"><div><ul><li>Product and quantity availability</li><li>Your delivery location and access</li><li>Proposed delivery timing</li></ul><p>Availability is confirmed before you proceed.</p></div></div>
+        </article>
+        <article class="journey-card">
+          <button class="journey-toggle" type="button" aria-expanded="false"><span class="journey-number">03</span><span class="journey-kicker">Confirm</span><h3>Review the agreement</h3><p>Check the pricing, schedule and rental details.</p><span class="journey-prompt">What you review <i>+</i></span></button>
+          <div class="journey-detail"><div><ul><li>Monthly rate and rental period</li><li>Selected product, size and colour</li><li>Delivery, assembly and applicable terms</li></ul><p>Nothing moves forward until the details are confirmed.</p></div></div>
+        </article>
+        <article class="journey-card">
+          <button class="journey-toggle" type="button" aria-expanded="false"><span class="journey-number">04</span><span class="journey-kicker">Settle in</span><h3>Delivery and next steps</h3><p>Receive your furniture according to the confirmed plan.</p><span class="journey-prompt">What happens next <i>+</i></span></button>
+          <div class="journey-detail"><div><ul><li>Delivery and assembly are arranged</li><li>Use the furniture for the agreed term</li><li>Discuss extension or collection before the term ends</li></ul><p>Any changes remain subject to availability and agreed terms.</p></div></div>
+        </article>
+      </div>
+      <div class="journey-action"><a class="button button-dark" href="how-it-works.html">View the complete rental process</a></div>
     </section>
 
     <section class="business" id="business">
@@ -140,7 +164,7 @@
     <a class="brand brand-light" href="#top" aria-label="Supreme Office Rentals home"><img class="brand-logo" src="assets/supreme-office-logo.png" alt="Supreme Office"></a>
     <p>Flexible furniture for better workplaces.</p>
     <div class="footer-links"><a href="#collection">Collection</a><a href="how-it-works.html">How it works</a><a href="#business">Business</a><a href="#faq">FAQ</a></div>
-    <small>© 2026 Supreme Office Rentals. Kuala Lumpur, Malaysia.</small>
+    <small>&copy; 2026 Supreme Office Rentals.<span class="footer-company">BY SUPREME OFFICE FURNITURE SYSTEM S/B (199501003646)</span><span class="footer-location">Klang, Selangor, Malaysia.</span></small>
   </footer>
 
   <div class="cart-overlay" aria-hidden="true"></div>
@@ -156,7 +180,7 @@
   </aside>
 
   <div class="toast" role="status" aria-live="polite">Added to your rental cart</div>
-  <script src="products.js"></script>
-  <script src="script.js"></script>
+  <script src="products.js?v=20260619-16"></script>
+  <script src="script.js?v=20260619-23"></script>
 </body>
 </html>
