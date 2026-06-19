@@ -8,13 +8,13 @@ function money(value){return `RM${value.toLocaleString("en-MY")}`;}
 function lowestMonthlyPrice(product){if(product.rentalRates)return product.rentalRates[product.rentalRates.length-1].price;return Math.round(product.price*.68);}
 
 const productCategories=[
-  {id:"chairs",name:"Office chairs",description:"Comfortable seating for focused workdays",image:"assets/vivo-task-chair.png"},
-  {id:"desks",name:"Office tables / desks",description:"Practical work surfaces for individuals and teams",image:"assets/useful-work-desk-maple.webp"},
-  {id:"cabinets",name:"Office cabinets",description:"Smart storage for organised workplaces",image:"https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=80"},
-  {id:"workstations",name:"Office workstation seaters",description:"Flexible workstation setups for growing teams",image:"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80"},
-  {id:"director-desks",name:"Director desks",description:"Executive desks with a professional presence",image:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80"},
-  {id:"training-tables",name:"Training tables",description:"Adaptable tables for workshops and events",image:"https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=700&q=80"},
-  {id:"conference-tables",name:"Conference tables / desks",description:"Professional tables for meetings and collaboration",image:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80"}
+  {id:"chairs",name:"Office Chairs",description:"Comfortable seating for focused workdays",image:"assets/vivo-task-chair.png"},
+  {id:"desks",name:"Office Tables / Desks",description:"Practical work surfaces for individuals and teams",image:"assets/useful-work-desk-maple.webp"},
+  {id:"cabinets",name:"Office Cabinets",description:"Smart storage for organised workplaces",image:"https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=80"},
+  {id:"workstations",name:"Office Workstation Seaters",description:"Flexible workstation setups for growing teams",image:"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80"},
+  {id:"director-desks",name:"Director Desks",description:"Executive desks with a professional presence",image:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80"},
+  {id:"training-tables",name:"Training Tables",description:"Adaptable tables for workshops and events",image:"https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=700&q=80"},
+  {id:"conference-tables",name:"Conference Tables / Desks",description:"Professional tables for meetings and collaboration",image:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80"}
 ];
 
 function renderProducts(){

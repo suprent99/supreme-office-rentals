@@ -1,11 +1,11 @@
 const categories = {
-  chairs:{title:"Office chairs",description:"Supportive, comfortable seating for focused workdays."},
-  desks:{title:"Office tables and desks",description:"Practical desks and tables for teams of every size."},
-  cabinets:{title:"Office cabinets",description:"Smart storage that keeps your workspace organised."},
-  workstations:{title:"Office workstation seaters",description:"Flexible workstation layouts designed for growing teams."},
-  "director-desks":{title:"Director desks",description:"Executive desks with a confident, professional presence."},
-  "training-tables":{title:"Training tables",description:"Adaptable tables for training rooms, workshops and events."},
-  "conference-tables":{title:"Conference tables and desks",description:"Professional meeting tables for boardrooms, discussions and collaborative work."}
+  chairs:{title:"Office Chairs",description:"Supportive, comfortable seating for focused workdays."},
+  desks:{title:"Office Tables and Desks",description:"Practical desks and tables for teams of every size."},
+  cabinets:{title:"Office Cabinets",description:"Smart storage that keeps your workspace organised."},
+  workstations:{title:"Office Workstation Seaters",description:"Flexible workstation layouts designed for growing teams."},
+  "director-desks":{title:"Director Desks",description:"Executive desks with a confident, professional presence."},
+  "training-tables":{title:"Training Tables",description:"Adaptable tables for training rooms, workshops and events."},
+  "conference-tables":{title:"Conference Tables and Desks",description:"Professional meeting tables for boardrooms, discussions and collaborative work."}
 };
 
 const params = new URLSearchParams(window.location.search);
