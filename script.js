@@ -10,8 +10,8 @@ function lowestMonthlyPrice(product){if(product.rentalRates)return product.renta
 const productCategories=[
   {id:"chairs",name:"Office Chairs",description:"Comfortable seating for focused workdays",image:"assets/vivo-task-chair.png"},
   {id:"desks",name:"Office Tables / Desks",description:"Practical work surfaces for individuals and teams",image:"assets/useful-work-desk-maple.webp"},
-  {id:"cabinets",name:"Office Cabinets",description:"Smart storage for organised workplaces",image:"https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=80"},
-  {id:"workstations",name:"Office Workstation Seaters",description:"Flexible workstation setups for growing teams",image:"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80"},
+  {id:"cabinets",name:"Office Cabinets",description:"Smart storage for organised workplaces",image:"assets/open-shelf-low-cabinet-g/cabinet-category.png"},
+  {id:"workstations",name:"Office Workstation Seaters",description:"Flexible workstation setups for growing teams",image:"assets/simple-office-workstation-2-seaters/workstation-category.png"},
   {id:"director-desks",name:"Director Desks",description:"Executive desks with a professional presence",image:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80"},
   {id:"training-tables",name:"Training Tables",description:"Adaptable tables for workshops and events",image:"https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=700&q=80"},
   {id:"conference-tables",name:"Conference Tables / Desks",description:"Professional tables for meetings and collaboration",image:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80"}
